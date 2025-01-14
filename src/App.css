@@ -1,0 +1,437 @@
+/* General body styling */
+body.dark-mode {
+  background-color: #2a2a2a;
+  background-image: none;
+  color: #e0e0e0;
+}
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  background: inherit;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #636068;
+}
+
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-right: 1px solid #444;
+  height: 100vh;
+  overflow: hidden;
+}
+.sidebar.open {
+  width: 10px;
+}
+
+.sidebar h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Button Styling in Sidebar */
+.each {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.each button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.each button:hover {
+  background-color: #ad0000;
+}
+
+/* Panel Styling */
+.panel {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Toggle Dark Mode Button */
+.panel button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.panel button:hover {
+  background-color: #ad0000;
+}
+
+/* User Section Styling */
+.user {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  max-width: fit-content;
+  margin-right: 5px;
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+body.light-mode .user {
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+/* Upload Audio Styling - Google UI colors */
+.upload_audio {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #0059e7; /* Google's blue */
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .upload_audio {
+  background-color: #e3f2fd; /* Light blue tone */
+  color: #333;
+}
+
+.upload_audio input[type="file"] {
+  display: block;
+  margin: 10px 0;
+}
+
+.upload_audio button {
+  padding: 10px 20px;
+  background-color: #34A853; /* Google's green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload_audio button:hover {
+  background-color: #0f9d58; /* Darker green on hover */
+}
+
+/* Display Audio Styling - Google UI colors */
+.display_audio {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #a17900; /* Google's yellow */
+  color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .display_audio {
+  background-color: #fff9e1; /* Light yellow tone */
+  color: #333;
+}
+
+.display_audio audio {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Lyrics Section - Google UI colors */
+.lyrics {
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  background-color: #420802; /* Google's red */
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .lyrics {
+  background-color: #fdecea; /* Light red tone */
+  color: #333;
+}
+
+
+
+/* Lyrics text */
+.low, .mid {
+  margin: 10px 0;
+}
+
+.low {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.mid {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Hover effect on items */
+.each:hover {
+  background-color: #ad0000;
+}
+
+/* Smooth transition */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar, .panel, .upload_audio, .display_audio, .lyrics {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Container for toggle switch */
+.toggle-switch-container {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Push the toggle switch to the extreme right */
+  display: flex;
+  align-items: center;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px; /* Add some space between the switch and mode label */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #444;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Mode label */
+.mode-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+body.dark-mode .mode-label {
+  color: #fff;
+}
+
+
+
+
+
+
+/* App.css */
+.container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+}
+
+.auth-buttons {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.auth-button {
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: green;
+}
+
+.welcome-title {
+  text-align: center;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.auth-forms {
+  width: 100%;
+  max-width: 300px; /* Reduced from 400px */
+  margin: 1rem auto; /* Reduced from 2rem */
+}
+
+/* Login Form Styles */
+.login form,
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced from 1rem */
+  padding: 1rem; /* Reduced from 2rem */
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login label,
+.signup label {
+  font-weight: 500;
+  margin-bottom: 0.25rem; /* Reduced from 0.5rem */
+  font-size: 0.9rem; /* Added to make labels smaller */
+}
+
+.login input,
+.signup input {
+  padding: 0.5rem; /* Reduced from 0.75rem */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  width: 100%;
+}
+
+.login button[type="submit"],
+.signup button[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem; /* Reduced from 0.75rem */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  margin-top: 0.5rem; /* Reduced from 1rem */
+}
+
+.login button[type="submit"]:hover,
+.signup button[type="submit"]:hover {
+  background-color: darkblue;
+}
+
+/* Remove default break styling */
+.login br,
+.signup br {
+  display: none;
+}
+
+/* Typewriter Text Styles */
+
+.displayText {
+  background-color: #e4f2f1; /* Light SeaGreen (Teal) */
+  font-size: 48px;
+  color: #5f0084; /* White text */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .auth-forms {
+    padding: 0.5rem;
+  }
+  
+  .displayText {
+    font-size: 32px;
+  }
+}
